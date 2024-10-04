@@ -1,0 +1,109 @@
+body{
+margin: 0;
+padding: 0;
+
+}
+
+
+button{ margin:10px;}
+.grid-container {
+        display: grid;
+        grid-template-columns:  auto repeat(7,1fr);
+        grid-template-rows: repeat(4,1fr); ;
+        overflow: hidden;
+        }
+        .grid-container>*{
+                border: 1px solid black;
+        }
+
+.sidebar{
+background-color: rgba(201, 76, 76, 0.3);
+grid-row: 1 / 5;
+grid-column: 1/2;
+padding-right: 17px;
+overflow-y:hidden;
+transition: width  0.5s ease-in-out;
+width:40px;
+}
+.sidebar:hover{
+width: 200px;
+}
+
+.post{
+width: 80%;
+margin:10px;
+
+}
+.comment{ 	justify-content : center; }
+
+.head {
+        grid-column: 2 / 9;
+        grid-row: 1/2;
+background-color:  rgba(0, 0, 0, 0.3);
+
+
+}
+.post-comments {
+        grid-column: 2 / 9;
+        grid-row: auto/3;
+        background-color:  rgba(0, 250, 0, 0.3);
+}
+.comments {
+
+      background-color: rgba(0, 0, 250, 0.3);
+      
+      grid-column: 2 / 9;
+      grid-row: 3/ 5;
+    
+}
+@media (max-width: 425px ){
+        html,body{
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+        }
+.grid-container {
+        display: grid;
+        grid-template-columns:  repeat(7,1fr);
+        grid-template-rows: auto repeat(4,1fr);
+        height: 100vh;
+        overflow: hidden;  
+     }
+        .sidebar{
+                grid-column: 1/8;
+                grid-row: 1/1;
+                padding-right: 0px;
+                overflow-x:auto;
+                transition: height  0.5s ease-in-out;
+                height:40px;
+                width: 100%;
+        }
+        .sidebar:hover{
+                height: 100vh;
+                width: 100%;
+                }
+                .sidebar.expanded {
+                        height: 100vh;
+                        width: 100%;
+                    }
+
+        .post-comments{
+                grid-column: 1/9;
+                grid-row: 3/4;
+
+        }
+
+        .comments
+        {
+                grid-column: 1/9;
+                grid-row: 4/5;
+                
+        }
+        .head
+        {
+                grid-column: 1/9;
+                grid-row: 2 / 3;
+        }
+     
+}

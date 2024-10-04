@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/views/styles/styles.css">
+
+    <title>Grid Layout</title>
+</head>
+<body>
+    <body>
+    <div class="grid-container">
+        <div class="sidebar">
+            <li></li>
+            <li></li>
+        </div>
+        <div class="head">
+            <h1>THIS IS A TITLE</h1><P>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta laborum neque ea, mollitia asperiores laudantium. Vero voluptas ad doloremque labore laborum, soluta, adipisci excepturi delectus accusamus quae consequuntur fugit provident?
+        </P></div>
+        <div class="post-comments">
+<label for="w3review">Review of W3Schools:</label>
+<br>
+<input class="post input-user" type="text" name="user-input" placeHolder="Insert your Username">
+<br>
+<textarea class="post comment" name="w3review" rows="8">
+</textarea><br>
+<button action="onClick">Submit</button></div>
+        <div class="comments">4</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            let isExpanded = false;
+    
+            sidebar.addEventListener('touchstart', function() {
+                if (!isExpanded) {
+                    sidebar.style.height = '100vh';
+                    isExpanded = true;
+                } else {
+                    sidebar.style.height = '40px';
+                    isExpanded = false;
+                }
+            });
+        });
+    </script>
+    <script href="./public/views/js/index.js"></script>
+
+</body>
+
+</html>
